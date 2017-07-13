@@ -10,11 +10,17 @@ import android.os.Parcelable;
 
 public class Book  implements Parcelable{
 	public int bookId;
-	public int bookName;
+	public String bookName;
 
-	protected Book(Parcel in) {
+	public Book(int bookId , String bookName){
+		this.bookId = bookId;
+		this.bookName = bookName;
+
+	}
+
+	public Book(Parcel in) {
 		bookId = in.readInt();
-		bookName = in.readInt();
+		bookName = in.readString();
 	}
 
 	public static final Creator<Book> CREATOR = new Creator<Book>() {
@@ -37,6 +43,6 @@ public class Book  implements Parcelable{
 	@Override
 	public void writeToParcel(Parcel dest, int flags) {
 		dest.writeInt(bookId);
-		dest.writeInt(bookName);
+		dest.writeString(bookName);
 	}
 }

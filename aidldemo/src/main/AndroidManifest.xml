@@ -33,6 +33,9 @@
         <service android:name=".service.MessengerService"
                  android:process=":aidldemo2"
                  />
+        <service android:name=".service.BookManagerService"
+                 android:process=":aidldemo3"
+                 />
     </application>
 
 </manifest>
