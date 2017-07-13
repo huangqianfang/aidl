@@ -69,6 +69,17 @@ public class MainActivity extends AppCompatActivity {
 				bindService(intent, mServiceConnection, Context.BIND_AUTO_CREATE);
 			}
 		});
+
+		findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(MainActivity.this, AidlActionActivity.class);
+				startActivity(intent);
+			}
+		});
+
+
+
 	}
 
 	@Override

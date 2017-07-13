@@ -30,6 +30,12 @@
             android:process=":aidldemo1">
 
         </activity>
+
+        <activity
+            android:name=".AidlActionActivity"
+            >
+
+        </activity>
         <service android:name=".service.MessengerService"
                  android:process=":aidldemo2"
                  />
