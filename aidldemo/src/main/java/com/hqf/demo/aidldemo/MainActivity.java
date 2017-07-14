@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.pm.PackageManager;
+import android.graphics.Paint;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
@@ -34,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
 
 	private Messenger mService;
 
+	Paint paint = new Paint();
+	private Rect rect;
+
 	private ServiceConnection mServiceConnection = new ServiceConnection() {
 		@Override
 		public void onServiceConnected(ComponentName name, IBinder service) {
@@ -60,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		String a ="1111";
+
+		paint.getTextBounds(a , 0 ,  a.length() , rect);
 
 
 		findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
@@ -74,6 +82,14 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(MainActivity.this, AidlActionActivity.class);
+				startActivity(intent);
+			}
+		});
+
+		findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(MainActivity.this, ProviderActivity.class);
 				startActivity(intent);
 			}
 		});
