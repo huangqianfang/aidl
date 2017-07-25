@@ -29,10 +29,20 @@ tools:context="com.hqf.demo.aidldemo.MainActivity">
         app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
-        android:id="@+id/button3"
+    android:id="@+id/button3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="跳转使用aidl进行线程间通信的contentprovider"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="跳转使用aidl进行线程间通信的contentprovider"
+        android:text="ActivityVolley"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
